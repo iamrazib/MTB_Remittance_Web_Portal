@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EzRemitService.ResponseClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EzRemitService.ResponseClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CashTxnDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecurityNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SendingCustomer" nillable="true" type="tns:SendingCustomer" />
+      <xs:element minOccurs="0" name="TransactionBeneficiary" nillable="true" type="tns:TransactionBeneficiary" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionPaymentDetails" nillable="true" type="tns:TransactionPaymentDetails" />
+      <xs:element minOccurs="0" name="TransactionStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeOfTransaction" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashTxnDetails" nillable="true" type="tns:CashTxnDetails" />
+  <xs:complexType name="SendingCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactTelephoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustBankBranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustBankBranchcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustBankBranchshortname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustBankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustBankShortname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustBankcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustDOB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustIDExpiryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustIDType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustMobileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustNationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustOccupation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustTelephoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerArabicName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerCardNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Relationship" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendingCustomer" nillable="true" type="tns:SendingCustomer" />
+  <xs:complexType name="TransactionBeneficiary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArabicName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BenBankBranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BenBankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BenCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BenID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactTelephoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FundSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBankAccountno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBankDiffernt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBranch" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBClearingNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBClearingType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBSwiftCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idtype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentAgentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentAgentCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentAgentLocationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Purpose" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverComm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientTelephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SwiftCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelephoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeOfTransaction" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionBeneficiary" nillable="true" type="tns:TransactionBeneficiary" />
+  <xs:complexType name="TransactionPaymentDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommissionAmount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FxAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FxCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LocalCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalTaxAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MktRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Rate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalLocalAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionPaymentDetails" nillable="true" type="tns:TransactionPaymentDetails" />
+  <xs:complexType name="PayoutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EzremitResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecurityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayoutResponse" nillable="true" type="tns:PayoutResponse" />
+</xs:schema>

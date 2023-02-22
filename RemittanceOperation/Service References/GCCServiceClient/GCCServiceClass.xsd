@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.32.63/GCC/GCCServiceClass.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" />
+  <xs:import schemaLocation="http://192.168.32.63/GCC/GCCServiceClass.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GCCService" />
+  <xs:element name="DisplayTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisplayTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" minOccurs="0" name="DisplayTransactionResult" nillable="true" type="q1:CashTxnResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PayTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReceiverIDType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReceiverIDNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PayTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" minOccurs="0" name="PayTransactionResult" nillable="true" type="q2:PayTranResponses" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankDepositTxn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankDepositTxnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" minOccurs="0" name="BankDepositTxnResult" nillable="true" type="q3:BankDepositResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBankDepositTxn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBankDepositTxnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" minOccurs="0" name="ProcessBankDepositTxnResult" nillable="true" type="q4:ProcessTransResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBankDepositTxnToPaid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBankDepositTxnToPaidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" minOccurs="0" name="UpdateBankDepositTxnToPaidResult" nillable="true" type="q5:UpdateBankDepositResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GCCService" minOccurs="0" name="composite" nillable="true" type="q6:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GCCService" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q7:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

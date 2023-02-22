@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.32.63/ICTC/ICTCServiceClass.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InstantCashService" />
+  <xs:import schemaLocation="http://192.168.32.63/ICTC/ICTCServiceClass.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/InstantCashService.ResponseClasses" />
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InstantCashService" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InstantCashService" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadAcTxnResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadAcTxnResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InstantCashService.ResponseClasses" minOccurs="0" name="DownloadAcTxnResultResult" nillable="true" type="q3:OutstandingRemittanceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IctcNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="statusFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InstantCashService.ResponseClasses" minOccurs="0" name="ConfirmTransactionResult" nillable="true" type="q4:ConfirmTranResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIctcStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IctcNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIctcStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/InstantCashService.ResponseClasses" minOccurs="0" name="GetIctcStatusResult" nillable="true" type="q5:IcPayStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceivePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IctcNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceivePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/InstantCashService.ResponseClasses" minOccurs="0" name="ReceivePaymentResult" nillable="true" type="q6:CashTxnDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IctcNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/InstantCashService.ResponseClasses" minOccurs="0" name="UnlockTransactionResult" nillable="true" type="q7:UnlockTranResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconcileTxn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportLevel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReconcileTxnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/InstantCashService.ResponseClasses" minOccurs="0" name="ReconcileTxnResult" nillable="true" type="q8:ReconcileResponses" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

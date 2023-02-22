@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3cf6f3ee-4928-4dc9-8d50-3b698d86ab7b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.32.63/GCC/GCCServiceClass.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GCCServiceClass.disco" MetadataType="Disco" ID="4dd32331-cbb6-4d3a-bb7a-b740450925f0" SourceId="1" SourceUrl="http://192.168.32.63/GCC/GCCServiceClass.svc?disco" />
+    <MetadataFile FileName="GCCServiceClass.wsdl" MetadataType="Wsdl" ID="4015b7f0-5b5a-4e17-8e94-b7c65d01369f" SourceId="1" SourceUrl="http://192.168.32.63/GCC/GCCServiceClass.svc?wsdl" />
+    <MetadataFile FileName="GCCServiceClass.xsd" MetadataType="Schema" ID="11b70ee5-b01f-4dde-8cda-75548dccc17c" SourceId="1" SourceUrl="http://192.168.32.63/GCC/GCCServiceClass.svc?xsd=xsd0" />
+    <MetadataFile FileName="GCCServiceClass1.xsd" MetadataType="Schema" ID="34269fc1-88cf-42f2-aa26-9fb25d9fc09f" SourceId="1" SourceUrl="http://192.168.32.63/GCC/GCCServiceClass.svc?xsd=xsd1" />
+    <MetadataFile FileName="GCCServiceClass2.xsd" MetadataType="Schema" ID="4bd39d29-13f4-4dfc-b797-304163173411" SourceId="1" SourceUrl="http://192.168.32.63/GCC/GCCServiceClass.svc?xsd=xsd2" />
+    <MetadataFile FileName="GCCServiceClass3.xsd" MetadataType="Schema" ID="2b427d23-ab1d-4a55-b76d-ded11025f01d" SourceId="1" SourceUrl="http://192.168.32.63/GCC/GCCServiceClass.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

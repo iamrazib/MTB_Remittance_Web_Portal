@@ -1,0 +1,87 @@
+﻿<!--
+                <div><a href="Home.aspx" title="Home">Home</a></div>
+
+                <div class="menuheaders"><a href="#" title="Balance">ExHouse Balance</a></div>
+                    <ul class="menucontents">	                    
+	                    <li><a href="ExhouseBalance.aspx">Balance</a></li>
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="TxnSearch">Txn Search</a></div>
+                    <ul class="menucontents">	                    
+	                    <li><a href="TxnSearch.aspx">Txn Search</a></li>
+                        <li><a href="BulkTxnCheck.aspx">Bulk Txn Check</a></li>
+                        <li><a href="AccountStatusCheck.aspx">Account Status Check</a></li>
+                        <li><a href="AMLCheck.aspx">AML Check</a></li>
+                        <li><a href="NonIndividualKeyword.aspx">Company Keyword Check</a></li>
+                        <li><a href="GlobalDataCheck.aspx">Global Data Check</a></li>
+                        <li><a href="APIRequestLog.aspx">API Request Log</a></li>
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="BEFTNAutoProcess">BEFTN Auto Process</a></div>
+                    <ul class="menucontents">	                    
+	                    <li><a href="BEFTNAutoProcessPendingProcessed.aspx">Pending & Processed Txn</a></li>
+                        <li><a href="BEFTNAutoProcessFailedTxn.aspx">Failed Txn</a></li>
+                        <li><a href="InvalidRoutingList.aspx">Invalid Routing List</a></li>
+                        <li><a href="RoutingInfo.aspx">Routing Info</a></li>    
+                        <li><a href="BEFTNMarking.aspx">BEFTN Marking</a></li>
+                        <li><a href="RemitCertificate.aspx">Remit Certificate</a></li>                        
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="EFTReturn">EFT Return</a></div>
+                    <ul class="menucontents">	                    
+	                    <li><a href="EFTReturnMailStats.aspx">Return Mail Status</a></li>
+                        <li><a href="EFTReturnTxnsList.aspx">Return Txns</a></li>
+                        <li><a href="EFTReturnEmailList.aspx">Return Email List</a></li>                        
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="DirectModel">Direct Model</a></div>
+                    <ul class="menucontents">	                    
+	                    <li><a href="DirectModelSearchTxn.aspx">Search Txn</a></li>                     
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="Summary">Summary</a></div>
+                    <ul class="menucontents">	                    
+	                    <li><a href="AllExhouseSummary.aspx">All Exhouse Summary</a></li>
+                        <li><a href="ExhouseWiseSummary.aspx">Exhouse Wise Summary</a></li>  
+                        <li><a href="AllModeMonthlySummary.aspx">All Mode Monthly Summary</a></li>                      
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="CashPassing">Cash Transaction Passing</a></div>
+                    <ul class="menucontents">
+                        <li><a href="DuplicateCashTxnCheck.aspx">Duplicate Cash Check</a></li>
+                        <li><a href="SearchBranchCashPassingTxn.aspx">Search Cash Txn</a></li>	                    
+	                    <li><a href="ICTCcashTxnPassing.aspx">ICTC Cash Pull</a></li>
+                        <li><a href="ICTCReportScreen.aspx">ICTC Report</a></li>
+                        <li><a href="GCCcashTxnPassing.aspx">GCC Cash Pull</a></li>  
+                        <li><a href="GCCReportScreen.aspx">GCC Report</a></li>
+                        <li><a href="EzRemitCashTxnPassing.aspx">EzRemit Cash Pull</a></li>    
+                        <li><a href="EzRemitCashReportScreen.aspx">EzRemit Report</a></li>                                      
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="PullAPITxn">Pull API Txn</a></div>
+                    <ul class="menucontents">	                  
+                        <li><a href="PullAPIMonitorTxn.aspx">Monitor Txn</a></li>
+                        <li><a href="PullAPISearchTxn.aspx">Search Txn</a></li>
+                        <li><a href="AutoFetchLog.aspx">Auto Fetch Log</a></li>                        
+	                </ul>
+                
+                <div class="menuheaders"><a href="#" title="DuplicateTxnCheck">Duplicate Txn Check</a></div>
+                    <ul class="menucontents">	                  
+                        <li><a href="DuplicateBEFTNTxnCheck.aspx">Duplicate BEFTN Check</a></li>  
+                        <li><a href="DuplicateMTBTxnCheck.aspx">Duplicate MTBAc Check</a></li>                          
+	                    <li><a href="DuplicateBkashTxnCheck.aspx">Duplicate Bkash Check</a></li>        
+	                </ul>
+
+                <div class="menuheaders"><a href="#" title="MonitorTxn">Monitor Txn</a></div>
+                    <ul class="menucontents">	                  
+                        <li><a href="MonitorMTBAcTxn.aspx">MTB Txn Check</a></li>                          
+	                    <li><a href="MonitorBkashAcTxn.aspx">Bkash Txn Check</a></li>        
+	                </ul>
+                
+                <div class="menuheaders"><a href="#" title="AdminPanel">Admin Panel</a></div>
+                    <ul class="menucontents">	                  
+                        <li><a href="RMSUserList.aspx">RMS User List</a></li>                          
+	                    <li><a href="ExHouseConfigure.aspx">ExHouse Configure</a></li>    
+	                </ul>
+
+                    -->

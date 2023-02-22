@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="917e1180-d978-46c2-9001-3d04939515bf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.32.63/ICTC/ICTCServiceClass.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ICTCServiceClass.xsd" MetadataType="Schema" ID="242feb39-9dba-4739-b09e-4d9210532e1e" SourceId="1" SourceUrl="http://192.168.32.63/ICTC/ICTCServiceClass.svc?xsd=xsd1" />
+    <MetadataFile FileName="ICTCServiceClass.disco" MetadataType="Disco" ID="08a3dff4-b8f1-4a0e-8aa9-3801d3b74942" SourceId="1" SourceUrl="http://192.168.32.63/ICTC/ICTCServiceClass.svc?disco" />
+    <MetadataFile FileName="ICTCServiceClass1.xsd" MetadataType="Schema" ID="58c462e1-1197-40d9-879d-9d3c330623f6" SourceId="1" SourceUrl="http://192.168.32.63/ICTC/ICTCServiceClass.svc?xsd=xsd3" />
+    <MetadataFile FileName="ICTCServiceClass2.xsd" MetadataType="Schema" ID="0f2375e9-2eb2-4f8a-b2dc-b59311e54425" SourceId="1" SourceUrl="http://192.168.32.63/ICTC/ICTCServiceClass.svc?xsd=xsd0" />
+    <MetadataFile FileName="ICTCServiceClass3.xsd" MetadataType="Schema" ID="3f21ac49-38b8-4ff8-b8d5-3e4f78d67b57" SourceId="1" SourceUrl="http://192.168.32.63/ICTC/ICTCServiceClass.svc?xsd=xsd2" />
+    <MetadataFile FileName="ICTCServiceClass.wsdl" MetadataType="Wsdl" ID="2e520198-7f5f-405c-835c-ce51a092559e" SourceId="1" SourceUrl="http://192.168.32.63/ICTC/ICTCServiceClass.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

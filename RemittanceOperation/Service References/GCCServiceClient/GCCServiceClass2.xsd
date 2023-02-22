@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GCCService.ResponseClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CashTxnResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountToPay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurposeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurposeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverFourthName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverMiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverNationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SendCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SendCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderFourthName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDExpiryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDPlaceOfIssue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIncomeSourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIncomeSourceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderMiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderNationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOccupationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOccupationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successful" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CashTxnResponse" nillable="true" type="tns:CashTxnResponse" />
+  <xs:complexType name="PayTranResponses">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountToPay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayTranResponses" nillable="true" type="tns:PayTranResponses" />
+  <xs:complexType name="BankDepositResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successful" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dsTransactionList" nillable="true" type="tns:ArrayOfDtResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankDepositResponse" nillable="true" type="tns:BankDepositResponse" />
+  <xs:complexType name="ArrayOfDtResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DtResult" nillable="true" type="tns:DtResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDtResult" nillable="true" type="tns:ArrayOfDtResult" />
+  <xs:complexType name="DtResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankAccountNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankBranchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankBranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:float" />
+      <xs:element minOccurs="0" name="PayinAmount" type="xs:float" />
+      <xs:element minOccurs="0" name="PayinCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayinCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayinCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayoutAmount" type="xs:float" />
+      <xs:element minOccurs="0" name="PayoutCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayoutCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayoutCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayoutCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayoutLocationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayoutLocationCode2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayoutLocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Purpose" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverContactNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverFourthName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverMiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiverNationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderFourthName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SenderIDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDPlaceOfIssue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIDType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIncomeSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderMiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderNationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderOccupation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DtResult" nillable="true" type="tns:DtResult" />
+  <xs:complexType name="ProcessTransResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountToPay" type="xs:float" />
+      <xs:element minOccurs="0" name="AmountToPayInWords" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceiveCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SendCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successful" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessTransResponse" nillable="true" type="tns:ProcessTransResponse" />
+  <xs:complexType name="UpdateBankDepositResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successful" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateBankDepositResponse" nillable="true" type="tns:UpdateBankDepositResponse" />
+</xs:schema>

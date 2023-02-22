@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F555372-6146-4EB1-B746-B2CB1600B5A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemittanceOperation</RootNamespace>
+    <AssemblyName>RemittanceOperation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.6783, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.69.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountStatusCheck.aspx" />
+    <Content Include="AlipaySftpFileUpload.aspx" />
+    <Content Include="AlipayStatementUpload.aspx" />
+    <Content Include="AllExhouseSummary.aspx" />
+    <Content Include="AllModeMonthlySummary.aspx" />
+    <Content Include="AMLCheck.aspx" />
+    <Content Include="APIRequestLog.aspx" />
+    <Content Include="AutoFetchLog.aspx" />
+    <Content Include="BEFTNAutoProcessFailedTxn.aspx" />
+    <Content Include="BEFTNAutoProcessPendingProcessed.aspx" />
+    <Content Include="BEFTNEligibleForIncentive.aspx" />
+    <Content Include="BEFTNIncentiveSuccessMarking.aspx" />
+    <Content Include="BEFTNMarking.aspx" />
+    <Content Include="BEFTNTxnCheck.aspx" />
+    <Content Include="BEFTNTxnStatusChange.aspx" />
+    <Content Include="BkashReversalFailed.aspx" />
+    <Content Include="BkashTerrapayDataUpload.aspx" />
+    <Content Include="BranchCashTxnDataUpload.aspx" />
+    <Content Include="BulkTxnCheck.aspx" />
+    <Content Include="CancelInstantCashTxn.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="CommissionCalculation.aspx" />
+    <Content Include="CommissionCalculation_old_file.txt" />
+    <Content Include="CompareInwardReturn.aspx" />
+    <Content Include="DirectModelManuallyProcess.aspx" />
+    <Content Include="DirectModelSearchTxn.aspx" />
+    <Content Include="dlls\AjaxControlToolkit.dll" />
+    <Content Include="dlls\ClosedXML.dll" />
+    <Content Include="dlls\DocumentFormat.OpenXml.dll" />
+    <Content Include="dlls\EPPlus.dll" />
+    <Content Include="dlls\Newtonsoft.Json.dll" />
+    <Content Include="dlls\Renci.SshNet.dll" />
+    <Content Include="DuplicateBEFTNTxnCheck.aspx" />
+    <Content Include="DuplicateBkashTxnCheck.aspx" />
+    <Content Include="DuplicateCashTxnCheck.aspx" />
+    <Content Include="DuplicateMTBTxnCheck.aspx" />
+    <Content Include="EFTMarkReturnTxn.aspx" />
+    <Content Include="EFTReturnEmailList.aspx" />
+    <Content Include="EFTReturnMailStats.aspx" />
+    <Content Include="EFTReturnResendMail.aspx" />
+    <Content Include="EFTReturnTxnsList.aspx" />
+    <Content Include="ExBalance_pre.aspx" />
+    <Content Include="ExhouseBalance.aspx" />
+    <Content Include="ExhouseBalanceNew.aspx" />
+    <Content Include="ExHouseConfigure.aspx" />
+    <Content Include="ExhouseWiseSummary.aspx" />
+    <Content Include="EzRemitCashReportScreen.aspx" />
+    <Content Include="EzRemitCashTxnPassing.aspx" />
+    <Content Include="FreelanceAccountNo.aspx" />
+    <Content Include="FreelanceKeyword.aspx" />
+    <Content Include="GCCcashTxnPassing.aspx" />
+    <Content Include="GCCReportScreen.aspx" />
+    <Content Include="GCCStatusChange.aspx" />
+    <Content Include="GlobalDataCheck.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="ICTCcashTxnPassing.aspx" />
+    <Content Include="ICTCmarkTransaction.aspx" />
+    <Content Include="ICTCReportScreen.aspx" />
+    <Content Include="InstantCashTxn.aspx" />
+    <Content Include="InvalidRoutingList.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="ManualEFTAuthScreen.aspx" />
+    <Content Include="ManualEFTEntryScreen.aspx" />
+    <Content Include="ManualEFTFailedTxn.aspx" />
+    <Content Include="ManualEFTPendingToAuthorize.aspx" />
+    <Content Include="ManualEFTSuccessReport.aspx" />
+    <Content Include="MenuConfigure.aspx" />
+    <Content Include="MobileWalletFreelanceTransaction.aspx" />
+    <Content Include="MonitorBkashAcTxn.aspx" />
+    <Content Include="MonitorMTBAcTxn.aspx" />
+    <Content Include="MTBAcTxn.aspx" />
+    <Content Include="NBLFailedTxnReport.aspx" />
+    <Content Include="NBLTxn.aspx" />
+    <Content Include="NBLTxnModification.aspx" />
+    <Content Include="NonIndividualKeyword.aspx" />
+    <Content Include="NonIndividualKeyword.txt" />
+    <Content Include="PaymentSuccessButCBSValueDateNull.aspx" />
+    <Content Include="PullAPIMonitorTxn.aspx" />
+    <Content Include="PullAPISearchTxn.aspx" />
+    <Content Include="RemitCertificate.aspx" />
+    <Content Include="RemittanceIncentiveReport.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="RMSUserList.aspx" />
+    <Content Include="RoleConfigure.aspx" />
+    <Content Include="RoleMenuMapping.aspx" />
+    <Content Include="RoutingInfo.aspx" />
+    <Content Include="RoutingNumberUpdate.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery191.min.js" />
+    <Content Include="SenderForeignerKeyword.aspx" />
+    <Content Include="Service References\EzRemitServiceClient\RemittanceOperation.EzRemitServiceClient.CashTxnDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EzRemitServiceClient\RemittanceOperation.EzRemitServiceClient.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EzRemitServiceClient\RemittanceOperation.EzRemitServiceClient.PayoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EzRemitServiceClient\EzRemitServiceClass1.wsdl" />
+    <None Include="Service References\EzRemitServiceClient\EzRemitServiceClass4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EzRemitServiceClient\EzRemitServiceClass41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EzRemitServiceClient\EzRemitServiceClass42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EzRemitServiceClient\EzRemitServiceClass43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GCCServiceClient\GCCServiceClass.disco" />
+    <None Include="Service References\GCCServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\GCCServiceClient\configuration.svcinfo" />
+    <None Include="Service References\GCCServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SearchBranchCashPassingTxn.aspx" />
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass.disco" />
+    <None Include="Service References\ICTCServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\ICTCServiceClient\configuration.svcinfo" />
+    <None Include="Service References\ICTCServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EzRemitServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\EzRemitServiceClient\configuration.svcinfo" />
+    <None Include="Service References\EzRemitServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Site1.Master" />
+    <None Include="Properties\PublishProfiles\remitOps.pubxml" />
+    <None Include="Service References\GCCServiceClient\GCCServiceClass.wsdl" />
+    <None Include="Service References\GCCServiceClient\GCCServiceClass.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GCCServiceClient\GCCServiceClass1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GCCServiceClient\GCCServiceClass2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GCCServiceClient\GCCServiceClass3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\GCCServiceClient\RemittanceOperation.GCCServiceClient.BankDepositResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GCCServiceClient\RemittanceOperation.GCCServiceClient.CashTxnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GCCServiceClient\RemittanceOperation.GCCServiceClient.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GCCServiceClient\RemittanceOperation.GCCServiceClient.PayTranResponses.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GCCServiceClient\RemittanceOperation.GCCServiceClient.ProcessTransResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GCCServiceClient\RemittanceOperation.GCCServiceClient.UpdateBankDepositResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass.wsdl" />
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICTCServiceClient\ICTCServiceClass3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ICTCServiceClient\RemittanceOperation.ICTCServiceClient.CashTxnDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ICTCServiceClient\RemittanceOperation.ICTCServiceClient.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ICTCServiceClient\RemittanceOperation.ICTCServiceClient.ConfirmTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ICTCServiceClient\RemittanceOperation.ICTCServiceClient.IcPayStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ICTCServiceClient\RemittanceOperation.ICTCServiceClient.OutstandingRemittanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ICTCServiceClient\RemittanceOperation.ICTCServiceClient.ReconcileResponses.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ICTCServiceClient\RemittanceOperation.ICTCServiceClient.UnlockTranResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\ddaccordion.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\ssm.js" />
+    <Content Include="Scripts\ssmItems.js" />
+    <Content Include="Scripts\wait.gif" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\icon\calendar.gif" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="TextFile1.txt" />
+    <Content Include="TxnSearch.aspx" />
+    <Content Include="UATBEFTNTableData.aspx" />
+    <Content Include="UATCASHTableData.aspx" />
+    <Content Include="UATExchUserList.aspx" />
+    <Content Include="UATMTBAcTableData.aspx" />
+    <Content Include="UATRequestLog.aspx" />
+    <Content Include="UATTableData.aspx" />
+    <Content Include="UATWalletTableData.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountStatusCheck.aspx.cs">
+      <DependentUpon>AccountStatusCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountStatusCheck.aspx.designer.cs">
+      <DependentUpon>AccountStatusCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlipaySftpFileUpload.aspx.cs">
+      <DependentUpon>AlipaySftpFileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlipaySftpFileUpload.aspx.designer.cs">
+      <DependentUpon>AlipaySftpFileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlipayStatementUpload.aspx.cs">
+      <DependentUpon>AlipayStatementUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlipayStatementUpload.aspx.designer.cs">
+      <DependentUpon>AlipayStatementUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllExhouseSummary.aspx.cs">
+      <DependentUpon>AllExhouseSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllExhouseSummary.aspx.designer.cs">
+      <DependentUpon>AllExhouseSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllModeMonthlySummary.aspx.cs">
+      <DependentUpon>AllModeMonthlySummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllModeMonthlySummary.aspx.designer.cs">
+      <DependentUpon>AllModeMonthlySummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMLCheck.aspx.cs">
+      <DependentUpon>AMLCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMLCheck.aspx.designer.cs">
+      <DependentUpon>AMLCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APIRequestLog.aspx.cs">
+      <DependentUpon>APIRequestLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APIRequestLog.aspx.designer.cs">
+      <DependentUpon>APIRequestLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\CConstants.cs" />
+    <Compile Include="AutoFetchLog.aspx.cs">
+      <DependentUpon>AutoFetchLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoFetchLog.aspx.designer.cs">
+      <DependentUpon>AutoFetchLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BEFTNAutoProcessFailedTxn.aspx.cs">
+      <DependentUpon>BEFTNAutoProcessFailedTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BEFTNAutoProcessFailedTxn.aspx.designer.cs">
+      <DependentUpon>BEFTNAutoProcessFailedTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BEFTNAutoProcessPendingProcessed.aspx.cs">
+      <DependentUpon>BEFTNAutoProcessPendingProcessed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BEFTNAutoProcessPendingProcessed.aspx.designer.cs">
+      <DependentUpon>BEFTNAutoProcessPendingProcessed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BEFTNEligibleForIncentive.aspx.cs">
+      <DependentUpon>BEFTNEligibleForIncentive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BEFTNEligibleForIncentive.aspx.designer.cs">
+      <DependentUpon>BEFTNEligibleForIncentive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BEFTNIncentiveSuccessMarking.aspx.cs">
+      <DependentUpon>BEFTNIncentiveSuccessMarking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BEFTNIncentiveSuccessMarking.aspx.designer.cs">
+      <DependentUpon>BEFTNIncentiveSuccessMarking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BEFTNMarking.aspx.cs">
+      <DependentUpon>BEFTNMarking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BEFTNMarking.aspx.designer.cs">
+      <DependentUpon>BEFTNMarking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BEFTNTxnCheck.aspx.cs">
+      <DependentUpon>BEFTNTxnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BEFTNTxnCheck.aspx.designer.cs">
+      <DependentUpon>BEFTNTxnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BEFTNTxnStatusChange.aspx.cs">
+      <DependentUpon>BEFTNTxnStatusChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BEFTNTxnStatusChange.aspx.designer.cs">
+      <DependentUpon>BEFTNTxnStatusChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BkashReversalFailed.aspx.cs">
+      <DependentUpon>BkashReversalFailed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BkashReversalFailed.aspx.designer.cs">
+      <DependentUpon>BkashReversalFailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BkashTerrapayDataUpload.aspx.cs">
+      <DependentUpon>BkashTerrapayDataUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BkashTerrapayDataUpload.aspx.designer.cs">
+      <DependentUpon>BkashTerrapayDataUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchCashTxnDataUpload.aspx.cs">
+      <DependentUpon>BranchCashTxnDataUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchCashTxnDataUpload.aspx.designer.cs">
+      <DependentUpon>BranchCashTxnDataUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkTxnCheck.aspx.cs">
+      <DependentUpon>BulkTxnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkTxnCheck.aspx.designer.cs">
+      <DependentUpon>BulkTxnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CancelInstantCashTxn.aspx.cs">
+      <DependentUpon>CancelInstantCashTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CancelInstantCashTxn.aspx.designer.cs">
+      <DependentUpon>CancelInstantCashTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommissionCalculation.aspx.cs">
+      <DependentUpon>CommissionCalculation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommissionCalculation.aspx.designer.cs">
+      <DependentUpon>CommissionCalculation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompareInwardReturn.aspx.cs">
+      <DependentUpon>CompareInwardReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompareInwardReturn.aspx.designer.cs">
+      <DependentUpon>CompareInwardReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBUtility\IDBManager.cs" />
+    <Compile Include="DBUtility\MailManager.cs" />
+    <Compile Include="DBUtility\Manager.cs" />
+    <Compile Include="AppCode\ConnectionInfo.cs" />
+    <Compile Include="AppCode\CSessionName.cs" />
+    <Compile Include="DBUtility\MTBDBManager.cs" />
+    <Compile Include="DBUtility\SQLDBManager.cs" />
+    <Compile Include="DBUtility\Utility.cs" />
+    <Compile Include="DirectModelManuallyProcess.aspx.cs">
+      <DependentUpon>DirectModelManuallyProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectModelManuallyProcess.aspx.designer.cs">
+      <DependentUpon>DirectModelManuallyProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirectModelSearchTxn.aspx.cs">
+      <DependentUpon>DirectModelSearchTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirectModelSearchTxn.aspx.designer.cs">
+      <DependentUpon>DirectModelSearchTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateBEFTNTxnCheck.aspx.cs">
+      <DependentUpon>DuplicateBEFTNTxnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DuplicateBEFTNTxnCheck.aspx.designer.cs">
+      <DependentUpon>DuplicateBEFTNTxnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateBkashTxnCheck.aspx.cs">
+      <DependentUpon>DuplicateBkashTxnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DuplicateBkashTxnCheck.aspx.designer.cs">
+      <DependentUpon>DuplicateBkashTxnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateCashTxnCheck.aspx.cs">
+      <DependentUpon>DuplicateCashTxnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DuplicateCashTxnCheck.aspx.designer.cs">
+      <DependentUpon>DuplicateCashTxnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateMTBTxnCheck.aspx.cs">
+      <DependentUpon>DuplicateMTBTxnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DuplicateMTBTxnCheck.aspx.designer.cs">
+      <DependentUpon>DuplicateMTBTxnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTMarkReturnTxn.aspx.cs">
+      <DependentUpon>EFTMarkReturnTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTMarkReturnTxn.aspx.designer.cs">
+      <DependentUpon>EFTMarkReturnTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTReturnEmailList.aspx.cs">
+      <DependentUpon>EFTReturnEmailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTReturnEmailList.aspx.designer.cs">
+      <DependentUpon>EFTReturnEmailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTReturnMailStats.aspx.cs">
+      <DependentUpon>EFTReturnMailStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTReturnMailStats.aspx.designer.cs">
+      <DependentUpon>EFTReturnMailStats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTReturnResendMail.aspx.cs">
+      <DependentUpon>EFTReturnResendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTReturnResendMail.aspx.designer.cs">
+      <DependentUpon>EFTReturnResendMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EFTReturnTxnsList.aspx.cs">
+      <DependentUpon>EFTReturnTxnsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EFTReturnTxnsList.aspx.designer.cs">
+      <DependentUpon>EFTReturnTxnsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExBalance_pre.aspx.cs">
+      <DependentUpon>ExBalance_pre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExBalance_pre.aspx.designer.cs">
+      <DependentUpon>ExBalance_pre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExhouseBalance.aspx.cs">
+      <DependentUpon>ExhouseBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExhouseBalance.aspx.designer.cs">
+      <DependentUpon>ExhouseBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExhouseBalanceNew.aspx.cs">
+      <DependentUpon>ExhouseBalanceNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExhouseBalanceNew.aspx.designer.cs">
+      <DependentUpon>ExhouseBalanceNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExHouseConfigure.aspx.cs">
+      <DependentUpon>ExHouseConfigure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExHouseConfigure.aspx.designer.cs">
+      <DependentUpon>ExHouseConfigure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExhouseWiseSummary.aspx.cs">
+      <DependentUpon>ExhouseWiseSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExhouseWiseSummary.aspx.designer.cs">
+      <DependentUpon>ExhouseWiseSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EzRemitCashReportScreen.aspx.cs">
+      <DependentUpon>EzRemitCashReportScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EzRemitCashReportScreen.aspx.designer.cs">
+      <DependentUpon>EzRemitCashReportScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EzRemitCashTxnPassing.aspx.cs">
+      <DependentUpon>EzRemitCashTxnPassing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EzRemitCashTxnPassing.aspx.designer.cs">
+      <DependentUpon>EzRemitCashTxnPassing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FreelanceAccountNo.aspx.cs">
+      <DependentUpon>FreelanceAccountNo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FreelanceAccountNo.aspx.designer.cs">
+      <DependentUpon>FreelanceAccountNo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FreelanceKeyword.aspx.cs">
+      <DependentUpon>FreelanceKeyword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FreelanceKeyword.aspx.designer.cs">
+      <DependentUpon>FreelanceKeyword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GCCcashTxnPassing.aspx.cs">
+      <DependentUpon>GCCcashTxnPassing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GCCcashTxnPassing.aspx.designer.cs">
+      <DependentUpon>GCCcashTxnPassing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GCCReportScreen.aspx.cs">
+      <DependentUpon>GCCReportScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GCCReportScreen.aspx.designer.cs">
+      <DependentUpon>GCCReportScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GCCStatusChange.aspx.cs">
+      <DependentUpon>GCCStatusChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GCCStatusChange.aspx.designer.cs">
+      <DependentUpon>GCCStatusChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalDataCheck.aspx.cs">
+      <DependentUpon>GlobalDataCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlobalDataCheck.aspx.designer.cs">
+      <DependentUpon>GlobalDataCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ICTCcashTxnPassing.aspx.cs">
+      <DependentUpon>ICTCcashTxnPassing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ICTCcashTxnPassing.aspx.designer.cs">
+      <DependentUpon>ICTCcashTxnPassing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ICTCmarkTransaction.aspx.cs">
+      <DependentUpon>ICTCmarkTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ICTCmarkTransaction.aspx.designer.cs">
+      <DependentUpon>ICTCmarkTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ICTCReportScreen.aspx.cs">
+      <DependentUpon>ICTCReportScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ICTCReportScreen.aspx.designer.cs">
+      <DependentUpon>ICTCReportScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InstantCashTxn.aspx.cs">
+      <DependentUpon>InstantCashTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InstantCashTxn.aspx.designer.cs">
+      <DependentUpon>InstantCashTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvalidRoutingList.aspx.cs">
+      <DependentUpon>InvalidRoutingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvalidRoutingList.aspx.designer.cs">
+      <DependentUpon>InvalidRoutingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManualEFTAuthScreen.aspx.cs">
+      <DependentUpon>ManualEFTAuthScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManualEFTAuthScreen.aspx.designer.cs">
+      <DependentUpon>ManualEFTAuthScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManualEFTEntryScreen.aspx.cs">
+      <DependentUpon>ManualEFTEntryScreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManualEFTEntryScreen.aspx.designer.cs">
+      <DependentUpon>ManualEFTEntryScreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManualEFTFailedTxn.aspx.cs">
+      <DependentUpon>ManualEFTFailedTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManualEFTFailedTxn.aspx.designer.cs">
+      <DependentUpon>ManualEFTFailedTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManualEFTPendingToAuthorize.aspx.cs">
+      <DependentUpon>ManualEFTPendingToAuthorize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManualEFTPendingToAuthorize.aspx.designer.cs">
+      <DependentUpon>ManualEFTPendingToAuthorize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManualEFTSuccessReport.aspx.cs">
+      <DependentUpon>ManualEFTSuccessReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManualEFTSuccessReport.aspx.designer.cs">
+      <DependentUpon>ManualEFTSuccessReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuConfigure.aspx.cs">
+      <DependentUpon>MenuConfigure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuConfigure.aspx.designer.cs">
+      <DependentUpon>MenuConfigure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileWalletFreelanceTransaction.aspx.cs">
+      <DependentUpon>MobileWalletFreelanceTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileWalletFreelanceTransaction.aspx.designer.cs">
+      <DependentUpon>MobileWalletFreelanceTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelClass\ExchangeHouseInfo.cs" />
+    <Compile Include="ModelClass\TerrapayReportData.cs" />
+    <Compile Include="MonitorBkashAcTxn.aspx.cs">
+      <DependentUpon>MonitorBkashAcTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonitorBkashAcTxn.aspx.designer.cs">
+      <DependentUpon>MonitorBkashAcTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorMTBAcTxn.aspx.cs">
+      <DependentUpon>MonitorMTBAcTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonitorMTBAcTxn.aspx.designer.cs">
+      <DependentUpon>MonitorMTBAcTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MTBAcTxn.aspx.cs">
+      <DependentUpon>MTBAcTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MTBAcTxn.aspx.designer.cs">
+      <DependentUpon>MTBAcTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NBLFailedTxnReport.aspx.cs">
+      <DependentUpon>NBLFailedTxnReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NBLFailedTxnReport.aspx.designer.cs">
+      <DependentUpon>NBLFailedTxnReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NBLTxn.aspx.cs">
+      <DependentUpon>NBLTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NBLTxn.aspx.designer.cs">
+      <DependentUpon>NBLTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NBLTxnModification.aspx.cs">
+      <DependentUpon>NBLTxnModification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NBLTxnModification.aspx.designer.cs">
+      <DependentUpon>NBLTxnModification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonIndividualKeyword.aspx.cs">
+      <DependentUpon>NonIndividualKeyword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonIndividualKeyword.aspx.designer.cs">
+      <DependentUpon>NonIndividualKeyword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentSuccessButCBSValueDateNull.aspx.cs">
+      <DependentUpon>PaymentSuccessButCBSValueDateNull.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSuccessButCBSValueDateNull.aspx.designer.cs">
+      <DependentUpon>PaymentSuccessButCBSValueDateNull.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PullAPIMonitorTxn.aspx.cs">
+      <DependentUpon>PullAPIMonitorTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PullAPIMonitorTxn.aspx.designer.cs">
+      <DependentUpon>PullAPIMonitorTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PullAPISearchTxn.aspx.cs">
+      <DependentUpon>PullAPISearchTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PullAPISearchTxn.aspx.designer.cs">
+      <DependentUpon>PullAPISearchTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemitCertificate.aspx.cs">
+      <DependentUpon>RemitCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemitCertificate.aspx.designer.cs">
+      <DependentUpon>RemitCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceIncentiveReport.aspx.cs">
+      <DependentUpon>RemittanceIncentiveReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemittanceIncentiveReport.aspx.designer.cs">
+      <DependentUpon>RemittanceIncentiveReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RMSUserList.aspx.cs">
+      <DependentUpon>RMSUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RMSUserList.aspx.designer.cs">
+      <DependentUpon>RMSUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoleConfigure.aspx.cs">
+      <DependentUpon>RoleConfigure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoleConfigure.aspx.designer.cs">
+      <DependentUpon>RoleConfigure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoleMenuMapping.aspx.cs">
+      <DependentUpon>RoleMenuMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoleMenuMapping.aspx.designer.cs">
+      <DependentUpon>RoleMenuMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutingInfo.aspx.cs">
+      <DependentUpon>RoutingInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutingInfo.aspx.designer.cs">
+      <DependentUpon>RoutingInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoutingNumberUpdate.aspx.cs">
+      <DependentUpon>RoutingNumberUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoutingNumberUpdate.aspx.designer.cs">
+      <DependentUpon>RoutingNumberUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBranchCashPassingTxn.aspx.cs">
+      <DependentUpon>SearchBranchCashPassingTxn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchBranchCashPassingTxn.aspx.designer.cs">
+      <DependentUpon>SearchBranchCashPassingTxn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SenderForeignerKeyword.aspx.cs">
+      <DependentUpon>SenderForeignerKeyword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SenderForeignerKeyword.aspx.designer.cs">
+      <DependentUpon>SenderForeignerKeyword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EzRemitServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GCCServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ICTCServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TxnSearch.aspx.cs">
+      <DependentUpon>TxnSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TxnSearch.aspx.designer.cs">
+      <DependentUpon>TxnSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UATBEFTNTableData.aspx.cs">
+      <DependentUpon>UATBEFTNTableData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UATBEFTNTableData.aspx.designer.cs">
+      <DependentUpon>UATBEFTNTableData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UATCASHTableData.aspx.cs">
+      <DependentUpon>UATCASHTableData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UATCASHTableData.aspx.designer.cs">
+      <DependentUpon>UATCASHTableData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UATExchUserList.aspx.cs">
+      <DependentUpon>UATExchUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UATExchUserList.aspx.designer.cs">
+      <DependentUpon>UATExchUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UATMTBAcTableData.aspx.cs">
+      <DependentUpon>UATMTBAcTableData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UATMTBAcTableData.aspx.designer.cs">
+      <DependentUpon>UATMTBAcTableData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UATRequestLog.aspx.cs">
+      <DependentUpon>UATRequestLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UATRequestLog.aspx.designer.cs">
+      <DependentUpon>UATRequestLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UATTableData.aspx.cs">
+      <DependentUpon>UATTableData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UATTableData.aspx.designer.cs">
+      <DependentUpon>UATTableData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UATWalletTableData.aspx.cs">
+      <DependentUpon>UATWalletTableData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UATWalletTableData.aspx.designer.cs">
+      <DependentUpon>UATWalletTableData.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FORMS\" />
+    <Folder Include="UploadedFiles\AlipayFiles\" />
+    <Folder Include="UploadedFiles\BkashTerrapayTxnFiles\" />
+    <Folder Include="UploadedFiles\BranchCashTxnFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EzRemitServiceClient\" />
+    <WCFMetadataStorage Include="Service References\GCCServiceClient\" />
+    <WCFMetadataStorage Include="Service References\ICTCServiceClient\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18631</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18631/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

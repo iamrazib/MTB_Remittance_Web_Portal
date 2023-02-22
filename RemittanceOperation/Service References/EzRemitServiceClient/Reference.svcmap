@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3500df41-bd5c-40a9-a2e0-5e65553b52bb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.32.63/EzRemitLive/EzRemitServiceClass.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EzRemitServiceClass4.xsd" MetadataType="Schema" ID="9a0ca1f8-ef06-4461-ba38-49a97a5fd28e" SourceId="1" SourceUrl="http://192.168.32.63/EzRemitLive/EzRemitServiceClass.svc?xsd=xsd3" />
+    <MetadataFile FileName="EzRemitServiceClass41.xsd" MetadataType="Schema" ID="3d56f104-c0d3-4014-af0c-be2dec252c3b" SourceId="1" SourceUrl="http://192.168.32.63/EzRemitLive/EzRemitServiceClass.svc?xsd=xsd2" />
+    <MetadataFile FileName="EzRemitServiceClass42.xsd" MetadataType="Schema" ID="03b419fd-81ff-4a9d-9182-a533c106aabf" SourceId="1" SourceUrl="http://192.168.32.63/EzRemitLive/EzRemitServiceClass.svc?xsd=xsd1" />
+    <MetadataFile FileName="EzRemitServiceClass43.xsd" MetadataType="Schema" ID="935cebf5-2e35-473e-9f3f-b21058e057c5" SourceId="1" SourceUrl="http://192.168.32.63/EzRemitLive/EzRemitServiceClass.svc?xsd=xsd0" />
+    <MetadataFile FileName="EzRemitServiceClass1.wsdl" MetadataType="Wsdl" ID="bde55b1e-3192-466c-a095-c05592fabb40" SourceId="1" SourceUrl="http://192.168.32.63/EzRemitLive/EzRemitServiceClass.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

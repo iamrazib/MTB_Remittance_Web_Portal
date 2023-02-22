@@ -1,0 +1,22 @@
+
+                //yearRange: '1950:2100'
+
+
+<%--<script type="text/javascript">
+        $(document).ready(function () {
+            $("#<%=dtPickerAutoProcessFromDt.ClientID %>").datepicker({
+                dateFormat: 'dd-M-yy',
+                changeMonth: true,
+                changeYear: true,
+                maxDate: new Date()
+            });
+
+            $("#<%=dtPickerAutoProcessToDt.ClientID %>").datepicker({
+                dateFormat: 'dd-M-yy',
+                changeMonth: true,
+                changeYear: true,
+                maxDate: new Date()
+            });
+        })               
+
+    </script>--%>
